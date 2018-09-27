@@ -12,7 +12,7 @@
         crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="bitcoin-mining-calc-5-style.css">
+    <link rel="stylesheet" href="bitcoin-mining-calc-4-style.css">
 </head>
 
 <body>
@@ -25,7 +25,6 @@
 
         <form id="calcForm">
             <div class="form-group-responsive">
-
                 <label class="font-weight-bold" for="hashrate">Hashrate (GH/s): </label>
                 <input type="text" class="form-control" id="hashrate" placeholder="Please enter hashrate to get values">
                 <button type="submit" id="submitHashrate" class="form-button btn btn-primary">Submit</button>
@@ -33,14 +32,12 @@
             </div>
         </form>
 
-
         <table class="calc-table table table-bordered">
             <thead>
                 <tr>
                     <th scope="col">Profits</th>
                     <th scope="col">Bitcoins</th>
                     <th scope="col">Dollars (USD)</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -48,13 +45,11 @@
                     <th scope="row">per Day</th>
                     <td id="btc_day"></td>
                     <td id="dol_day"></td>
-
                 </tr>
                 <tr>
                     <th scope="row">per Week</th>
                     <td id="btc_week"></td>
                     <td id="dol_week"></td>
-
                 </tr>
                 <tr>
                     <th scope="row">per Month</th>
@@ -63,8 +58,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <!-- How to make the th below smaller so there isn't so much blank space? -->
 
         <table class="calc-table table table-bordered">
 
