@@ -1,8 +1,11 @@
-$(".form-button").on("click", function (event) {
-    var hashrate = $('#hashrate').val();
-    event.preventDefault();
+$(document).ready(function () {
+    $('#include-navbar').load('shared_components.html');
+  });
 
-    $("#hashrate").val();
+
+$("#submitHashrate").on("click", function (event) {
+    event.preventDefault();
+    var hashrate = $('#hashrate').val();
 
     // Not sure how to implement this method within my code???
     // var num = 5.56789;
@@ -27,13 +30,11 @@ $(".form-button").on("click", function (event) {
 
         $("#btc_month").html('₿ ' + response.coins_per_hour * 24 * 7 * 4 * 1000000000);
 
-        $("#dol_day").html('$ ' + response.dollars_per_hour * 24 * 1000000000);
+        $("#dol_day").html('$ ' + (response.dollars_per_hour * 24 * 1000000000).toFixed(2));
 
-        $("#dol_week").html('$ ' + response.dollars_per_hour * 24 * 7 * 1000000000);
+        $("#dol_week").html('$ ' + (response.dollars_per_hour * 24 * 7 * 1000000000).toFixed(2));
 
-        $("#dol_month").html('$ ' + response.dollars_per_hour * 24 * 7 * 4 * 1000000000);
-
-        console.log(response);
+        $("#dol_month").html('$ ' + (response.dollars_per_hour * 24 * 7 * 4 * 1000000000).toFixed(2));
 
     });
 
